@@ -10,9 +10,12 @@ public class EmpWage {
 		int wage_per_hour = 20;
 		int working_hour = 0 ;
 		int max_days = 0;
-		int emp_monthly_wage = 0;
+		int max_working_hour = 100;
 		
-		while (max_days <= 20)
+		int emp_monthly_wage = 0;
+		int total_working_hour = 0;
+		
+		while (max_days <= 20 && total_working_hour <= max_working_hour)
 		{
 		
 		int EmpCheck = (int) (Math.random() * 10) %3;
@@ -31,12 +34,13 @@ public class EmpWage {
 			
 		default:
 			System.out.println("Employee is absent");
-			working_hour = 0;
 			break;
 		}
+		total_working_hour+=working_hour;
 		int Emp_daily_wage = working_hour * wage_per_hour;
 		System.out.println("Employee daily wage is " + Emp_daily_wage);
 		emp_monthly_wage+=Emp_daily_wage;
+		
 		max_days++;
 	
 	}
