@@ -4,8 +4,8 @@ public class EmpWage {
 	public static void main(String[] args) {
 		System.out.println("Welcome to employee wage computation program");
 		
-		final int is_present_full = 1;
-		final int is_present_part = 2;
+		final int IS_PRESENT_FULL = 1;
+		final int IS_PRESENT_PART = 2;
 		
 		int wage_per_hour = 20;
 		int working_hour = 0 ;
@@ -22,12 +22,12 @@ public class EmpWage {
 		
 		switch (EmpCheck)
 		{
-		case is_present_full:
+		case IS_PRESENT_FULL:
 			System.out.println("Employee is present for full time");
 			working_hour = 8;
 			break;
 			
-		case is_present_part:
+		case IS_PRESENT_PART:
 			System.out.println("Employee is present for part time");
 			working_hour = 4;
 			break;
